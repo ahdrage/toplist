@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>What did your parents listen to when you were concieved?</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    </head>
+    <body>
+        <div id="container">
+            <div class="title" align="center">
+                <h1>What did your parents listen to when you were concieved?</h1>
+
+            </div>
+           <br><br>
+            <div id="content">
+                <form method="post" action="{{ url_for('hello') }}">
+                 
+                
+
+      <div class="row" style="width:60%;margin:0 auto;">
+
+        <div class="col-xs-4"> <select class="form-control" name="chosenyear">
+              <option>Choose birth year</option>
+              <option>2016</option>
+              <option>2015</option>
+              <option>2014</option>
+              <option>2013</option>
+        </select></div>
+         <div class="col-xs-4"> <select class="form-control" name="chosenmonth">
+              <option>Choose birth month</option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+             
+         </select></div>
+
+         <div class="col-xs-4"> <select class="form-control" name="chosenday">
+              <option>Choose birth day</option>
+              <option>28</option>
+              <option>29</option>
+              <option>30</option>
+              <option>31</option>
+         </select></div>
+      </div>
+<br>
+<br>
+
+
+
+         <input type="submit" class="btn btn-primary btn-lg active" align="center" />
+         </form>
+         </div>
+         
+        
+            </div>
+        </div>
+    </body>
+</html>

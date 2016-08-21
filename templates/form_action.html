@@ -1,0 +1,48 @@
+ <html>
+    <head>
+        <title>They listened to this:</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1>They listened to this:</h1>
+            </div>
+            <div id="content">
+                It is year <strong>{{year}}</strong> and week {{new_week}}
+
+        <table border = 1>
+         <thead>
+            <td>Year</td>
+            <td>Week</td>
+            <td>Artist</td>
+            <td>Title</td>
+            <td>Spotid</td>
+            <td>Image</td>
+
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["Year"]}}</td>
+               <td>{{row["Week"]}}</td>
+               <td> {{ row["Artist"]}}</td>
+               <td>{{row['Title']}}</td> 
+               <td>{{row['SpotID']}}</td>  
+               <td>{{row['Image']}}</td> 
+            </tr>
+         {% endfor %}
+
+         </thead>
+         
+       
+
+        
+      </table>
+
+            </div>
+            
+              
+            </div>
+        </div>
+    </body>
+</html>
