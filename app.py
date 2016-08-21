@@ -30,20 +30,28 @@ def hello():
     month = int(month_test)
     day = int(day_test)
     week = date(year, month, day).isocalendar()[1]
+    
+    con = sql.connect("toplist3.db")
+    con.row_factory = sql.Row
+    cur = con.cursor()
+    cur.execute("select * from listing")
+    rows = cur.fetchall();
 
 
     if week < pregnancy: 
     	new_week = 52 + (week - pregnancy)
     	year = year - 1
 
+        
+
+
+        
+
+
 # this is where i am not sure what to do. I want to use the variables new_week and year to get that info from the database. 
 
-        con = sql.connect("toplist3.db")
-        con.row_factory = sql.Row
-
-        cur = con.cursor()
-        cur.execute("select * from listing")
-        rows = cur.fetchall(); 
+        
+        
 
 
 
