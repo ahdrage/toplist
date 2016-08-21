@@ -40,19 +40,7 @@ def hello():
 
     if week < pregnancy: 
     	new_week = 52 + (week - pregnancy)
-    	year = year - 1
-
-        
-
-
-        
-
-
-# this is where i am not sure what to do. I want to use the variables new_week and year to get that info from the database. 
-
-        
-        
-
+    	year = year - 1      
 
 
     	return render_template('form_action.html', year=year, new_week=new_week, rows = rows)
@@ -63,12 +51,6 @@ def hello():
        
 
     	return render_template('form_action.html', year=year, new_week=new_week)
-
-
-
-     
-   
-    
     
 
 # Run the app :)
